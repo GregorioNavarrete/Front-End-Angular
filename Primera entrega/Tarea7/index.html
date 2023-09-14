@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Datos Personales</title>
+    <style>
+        #DatosBasicos{
+            border: 2px solid grey;
+            padding: 1px 2px 3px 20px;
+            margin: 1px 2px 15px 4px;
+            width: 500px;
+            height: 300px;
+           
+        }
+        #DatosEconomicos{
+            border: 2px solid grey;
+            display: flex;
+            padding: 1px 2px 3px 20px;
+            margin: 1px 2px 15px 4px;
+            width: 500px; /* Establece el ancho del div */
+            height: 200px; /* Establece la altura del div, igual al ancho */
+        }
+        #DivImpuesto{
+            
+        }
+        #DB{
+            padding: 1px 2px 3px 20px;
+            margin: 1px 2px 15px 4px;
+        }
+        #Impue{
+            padding: 50px 2px 3px 20px;
+            margin: 1px 2px 15px 4px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Informacion sobre el producto</h1>
+        <form >
+            <div id="DatosBasicos">
+                <p id="DB">Datos Basicos</p>
+                <p>Nombre:</p>
+                <input>
+                <br>
+
+                <p>Descripción:</p>
+                <textarea  rows="4" cols="50"></textarea>
+                <br>
+
+                <label >Foto:</label>
+                <input type="file"  >
+                <br>
+
+                
+                <input type="checkbox"  required>
+                <label for="aceptar"> Aniadir contador de vistas</label>
+                <br>
+            </div>        
+
+        </form>
+    </div>
+    
+    
+    <div id="DatosEconomicos">
+
+        
+        <form action="#" method="POST">
+            <p>Datos economicos</p>
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" step="0.01" required>
+            <br>
+
+            <label>Promociones:</label>
+            <br>
+            <input type="radio" >
+            <label for="promocion1">Ninguno</label>
+            <br>
+            <input type="radio" >
+            <label for="promocion2">Trasporte gratuito</label>
+            <br>
+            <input type="radio" >
+            <label for="promocion3">Descuento 5%</label>
+            <br>
+        </form>
+        <form id="Impue">
+            <label for="impuesto">Tipo de Impuesto:</label>
+            <select id="impuesto" name="impuesto">
+                <option value="4">4%</option>
+                <option value="7">7%</option>
+                <option value="16">16%</option>
+                <option value="25">25%</option>
+            </select>
+        </form>    
+    </div>      
+</body>
+</html>
