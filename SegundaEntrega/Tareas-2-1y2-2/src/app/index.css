@@ -1,0 +1,38 @@
+header {
+    text-align: center; /* Centra el contenido del encabezado horizontalmente */
+    
+    top: 0; /* Alinea el encabezado en la parte superior de la página */
+    left: 0; /* Alinea el encabezado en el centro horizontal */
+    right: 0; /* Alinea el encabezado en el centro horizontal */
+    background-color: #ffff00; /* Color de fondo del encabezado */
+    color: black; /* Color del texto del encabezado */
+}
+footer{
+    text-align: center; /* Centra el contenido del encabezado horizontalmente */
+    
+    top: 100; 
+    left: 0; /* Alinea el encabezado en el centro horizontal */
+    right: 0; /* Alinea el encabezado en el centro horizontal */
+    padding: 10px; /* Espaciado interior para el contenido del encabezado */
+}
+
+#Izquierdo{
+    padding: 1px 50px 1px 1px;
+    float: left;
+    border-right: 3px solid green;
+}
+
+#Cuerpo{
+    padding: 8px 2px 3px 4px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+#Derecho{
+    /* background: #ffff00;  */ 
+    border:3px dotted green;
+    padding: 1px 2px 3px 4px;
+    float: right; /* Elemento a la derecha */
+    width: 20%; /* Opcional: establece el ancho */
+    height: 10%
+}
