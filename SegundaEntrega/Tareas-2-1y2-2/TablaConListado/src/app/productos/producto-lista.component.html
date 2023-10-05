@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-header">
+        <!--Mostar el titulo -->
+        {{pageTitle}}
+    </div>
+    <div class="card-body">
+        <!--Mostra el resto del listado-->
+        <div class="row">
+            <div class="col-md-2">Filtrar por:</div>
+            <div class="col-md-4">
+                <input type="text" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Filtrado por:</h4>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class='table' *ngIf="products.length">
+                <thead>
+                    <!--Para mostrar el encabezado de la tabla -->
+                    <tr>
+                        <th>
+                            <button class="btn btn-primary">
+                                Mostrar Imagen
+                            </button>
+                        </th>
+                        <th>Producto</th>
+                        <th>Código</th>
+                        <th>Disponible</th>
+                        <th>Precio</th>
+                        <th>5 Star Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Para agregar los datos de cada producto en cada fila de la tabla -->
+                    <tr *ngFor="let product of products">
+                        <td></td>
+                        <td>{{product.productName}}</td>
+                        <td>{{product.productCode}}</td>
+                        <td>{{product.releaseDate}}</td>
+                        <td>{{product.price}}</td>
+                        <td>{{product.starRating}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
