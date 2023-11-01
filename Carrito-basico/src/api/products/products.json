@@ -1,0 +1,34 @@
+[
+  {
+    "productId": 2,
+    "productName": "Carro de jardín",
+    "description": "Carro de jardín con ruedas de 15 galones de capacidad",
+    "price": 32.99,
+    "imageUrl": "assets/images/garden_cart.png",
+    "cantidad":0
+  },
+  {
+    "productId": 5,
+    "productName": "Martillo",
+    "description": "Martillo de acero con garra curva",
+    "price": 8.9,
+    "imageUrl": "assets/images/hammer.png",
+    "cantidad":0
+  },
+  {
+    "productId": 3,
+    "productName": "Camara",
+    "description": "tremenda cámara",
+    "price": 8.9,
+    "imageUrl": "assets/images/camera.png" 
+    ,"cantidad":0
+  },
+  {
+    "productId": 8,
+    "productName": "mate",
+    "description": "tremendo mate",
+    "price": 8.9,
+    "imageUrl": "assets/images/mate.png" 
+    ,"cantidad":0
+  }
+]

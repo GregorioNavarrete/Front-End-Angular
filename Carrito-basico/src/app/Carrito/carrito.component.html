@@ -1,0 +1,25 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Precio por unidad</th>
+            <th>Total Por producto</th>
+            <th>Cantidad</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of carrito; let i = index">
+            <td>{{ item.productName }}</td>
+            <td>{{ item.price | currency }}</td>
+            <td>{{ calcularTotalPorProducto(item) | currency }}</td>
+            <td>
+                <samp >{{ item.cantidad }}</samp>
+            </td>
+            <td>
+                <button (click)="eliminarDelCarrito(item)">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>

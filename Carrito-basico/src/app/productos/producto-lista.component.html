@@ -1,0 +1,99 @@
+<style>
+    /* Estilo para la lista de productos */
+.listaProduct {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.listaProduct h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.listaProduct h2 {
+  font-size: 18px;
+  color: #333;
+}
+
+.listaProduct p {
+  font-size: 14px;
+  color: #666;
+}
+
+.listaProduct button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.listaProduct button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para la lista de carrito */
+.listaCarrito {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.listaCarrito h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.listaCarrito table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.listaCarrito th, .listaCarrito td {
+  border: 1px solid #666;
+  padding: 8px;
+  text-align: left;
+}
+
+.listaCarrito th {
+  background-color: #555;
+  color: #fff;
+}
+
+.listaCarrito tr:nth-child(even) {
+  background-color: #444;
+}
+
+</style>
+<div class="listaProduct">
+    <h1>{{pageTitle}}</h1>
+    <div *ngFor="let producto of productos">
+        <th>
+          <h2>{{ producto.productName }}</h2>
+          <div>Descripción: {{ producto.description }}</div>
+          <div>Precio: {{ producto.price | currency }}</div>
+        </th>
+        <div class="cantidad">
+          <button (click)="menosCantidad(producto)" (click)="calcularTotal()">-</button>
+          <samp>{{producto.cantidad}}</samp>
+          <button  (click)="masCantidad(producto)" (click)="calcularTotal()">+</button>
+        </div>
+        <th><button (click)="agregarAlCarrito(producto)" (click)="calcularTotal()">Agregar al carrito</button></th>
+        
+    </div>
+</div>
+<div class="listaCarrito">
+    <pm-carrito [carrito]="carrito"></pm-carrito>
+      <tr>
+          <th>Total:</th>
+          <th>{{ Total | currency }}</th>
+      </tr>
+</div>
